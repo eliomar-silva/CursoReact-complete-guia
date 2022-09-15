@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
-
 import AddUser from "./components/Users/AddUser";
 import CompUsersList from "./components/Users/UsersList";
-
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -18,11 +16,10 @@ function App() {
   };
 
   return (
-    <div>
-      
+    <React.Fragment>
       <AddUser onAddUser={addUsersHandler} />
       <CompUsersList users={usersList} />
-    </div>
+    </React.Fragment>
   );
 }
 
